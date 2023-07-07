@@ -8,10 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:href": "ng build --base-href ./",
-    "delete:docs": "del docs",
     "copy:dist": "copyfiles dist/02-bases/* ./docs -f",
-    "delete:dist": "del dist",
-    "build:git": "yarn delete:docs && yarn build:href && yarn copy:dist && yarn delete:dist"
+    "build:git": "yarn del docs && yarn build:href && yarn copy:dist && yarn del dist"
   },
   "private": true,
   "dependencies": {
