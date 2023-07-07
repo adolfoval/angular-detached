@@ -1,0 +1,29 @@
+<p>{{name}}</p>
+<dl>
+    <td>Nombre:</td>
+    <dd>{{name}}</dd>
+    
+    <td>Edad:</td>
+    <dd>{{age}}</dd>
+    
+    <td>M&eacute;todo:</td>
+    <dd>{{getHerodescription()}}</dd>
+    
+    <td>Capitalizado:</td>
+    <dd>{{capitalizedName}}</dd>
+</dl>
+
+<button 
+    *ngIf="name !== 'Robin Hood'"
+    class="btn btn-dark me-2" 
+    (click)="changeName()">
+    Cabiar nombre
+</button>
+
+<button class="btn btn-light ms-2 me-2" (click)="resetInfo()">
+    Reset
+</button>
+
+<button *ngIf="age !== 60" class="btn btn-dark" (click)="changeAge()">
+    Cambiar edad
+</button>
